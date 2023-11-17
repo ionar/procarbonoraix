@@ -54,6 +54,6 @@ test:
 #
 production:
   <<: *default
-  database: procarbonoraix_production
+  database: procarbonoraix
   username: <%= ENV["PROCARBONO_RAIX_DATABASE_USERNAME"] %>
   password: <%= ENV["PROCARBONO_RAIX_DATABASE_PASSWORD"] %>
