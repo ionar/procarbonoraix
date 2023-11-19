@@ -4,9 +4,9 @@ class SubscriptionsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   # GET /subscriptions or /subscriptions.json
-  # def index
-  #   @subscriptions = Subscription.all
-  # end
+  def index
+    @subscriptions = Subscription.all
+  end
 
   # GET /subscriptions/1 or /subscriptions/1.json
   # def show
