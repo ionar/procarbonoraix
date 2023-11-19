@@ -29,6 +29,10 @@ class SubscriptionsController < ApplicationController
       if @subscription.save
         # format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
         format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
+        
+        ##flash.now[:alert] = "Unable to create rescue."
+        ##render :new, status: :unprocessable_entity
+
         format.json { render :show, status: :created, location: @subscription }
         puts "Salvou!!"
       else
