@@ -1,5 +1,6 @@
 class SubscriptionsController < ApplicationController
   # before_action :set_subscription, only: %i[ show edit update destroy ]
+  before_action :set_subscription, only: %i[ show ]
   ##protect_from_forgery with: :null_session
   skip_before_action :verify_authenticity_token
 
@@ -27,8 +28,8 @@ class SubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @subscription.save
-        # format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
-        format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
+        format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
+        ###format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
         
         ##flash.now[:alert] = "Unable to create rescue."
         ##render :new, status: :unprocessable_entity
@@ -67,9 +68,9 @@ class SubscriptionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    # def set_subscription
-    #   @subscription = Subscription.find(params[:id])
-    # end
+    def set_subscription
+      @subscription = Subscription.find(params[:id])
+    end
 
     # Only allow a list of trusted parameters through.
     def subscription_params
