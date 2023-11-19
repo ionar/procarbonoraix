@@ -30,6 +30,7 @@ class SubscriptionsController < ApplicationController
         # format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
         format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
         format.json { render :show, status: :created, location: @subscription }
+        puts "Salvou!!"
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @subscription.errors, status: :unprocessable_entity }
