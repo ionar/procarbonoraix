@@ -32,7 +32,7 @@ class SubscriptionsController < ApplicationController
         format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
         #format.turbo_stream { flash.now[:notice] = "foi via turbo" }
         
-        ##flash.now[:alert] = "Unable to create rescue."
+        flash.now[:notice] = "foi via flash"
         ##render :new, status: :unprocessable_entity
 
         format.json { render :show, status: :created, location: @subscription }
