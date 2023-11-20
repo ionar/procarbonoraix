@@ -29,12 +29,12 @@ class SubscriptionsController < ApplicationController
     respond_to do |format|
       if @subscription.save
         ##format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
-        format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
+        format.html { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada!" }
+        ##format.html { render :new, notice: "Sua solicitação foi enviada!" }
         #format.turbo_stream { flash.now[:notice] = "foi via turbo" }
         
         flash.now[:notice] = "foi via flash"
         ##render :new, status: :unprocessable_entity
-
         format.json { render :show, status: :created, location: @subscription }
         puts "Salvou!!"
       else

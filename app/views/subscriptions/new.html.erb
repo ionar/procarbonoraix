@@ -16,11 +16,6 @@
                 </p>
                 <p class="campos-texto">CAMPOS DE PREENCHIMENTO</p>
                 <span class="form-messages-and-error"><%= notice %></span>
-                <% flash.each do |type, msg| %>
-                  <div>
-                    <%= msg %>
-                  </div>
-                <% end %>
                 <%= render "form", subscription: @subscription %>
               </div>
               <div class="logos-programa-vertical text-center">
