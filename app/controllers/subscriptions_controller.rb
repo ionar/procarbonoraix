@@ -28,8 +28,9 @@ class SubscriptionsController < ApplicationController
 
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
-        ###format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
+        ##format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
+        format.html { redirect_to root_url, notice: "Sua solicitação foi enviada!" }
+        #format.turbo_stream { flash.now[:notice] = "foi via turbo" }
         
         ##flash.now[:alert] = "Unable to create rescue."
         ##render :new, status: :unprocessable_entity
