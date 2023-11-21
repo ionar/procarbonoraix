@@ -29,11 +29,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
     if @subscription.save
       flash.now[:notice] = "salvou via flash now"
-    else
-      flash.now[:error] = "Failed to update submission."
-    end
-
-    render turbo_stream: [
+      render turbo_stream: [
                 turbo_stream.replace(
                   "turbo_id",
                   partial: "shared/flash_message",
@@ -43,6 +39,14 @@ class SubscriptionsController < ApplicationController
                 ),
                 turbo_stream.replace("flash-messages", partial: "shared/flash_message"),
               ]
+    else
+      #flash.now[:error] = "Failed to update submission."
+      respond_to do |format|
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+
+    
 
 =begin
     respond_to do |format|

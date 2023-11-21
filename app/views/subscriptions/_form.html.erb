@@ -1,5 +1,6 @@
 <%= form_with(model: subscription ) do |form| %>
 <span class="form-messages-and-error"><%= notice %></span>
+ <%= render partial: "shared/flash_message" %>
   <% if subscription.errors.any? %>
       <%# pluralize(subscription.errors.count, "error") %>
       <script>
