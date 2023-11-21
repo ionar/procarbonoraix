@@ -27,40 +27,30 @@ class SubscriptionsController < ApplicationController
   # POST /subscriptions or /subscriptions.json
   def create
     @subscription = Subscription.new(subscription_params)
-    if @subscription.save
-      flash.now[:notice] = "salvou via flash now"
-      render turbo_stream: [
-                turbo_stream.replace(
-                  "turbo_id",
-                  partial: "shared/flash_message",
-                  locals: {
-                    # ...
-                  },
-                ),
-                turbo_stream.replace("flash-messages", partial: "shared/flash_message"),
-              ]
-    else
-      #flash.now[:error] = "Failed to update submission."
-      respond_to do |format|
-        format.html { render :new, status: :unprocessable_entity }
-      end
-    end
-
-    
-
-=begin
     respond_to do |format|
       if @subscription.save
-        ##format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
+        flash.now[:notice] = "Solicitação enviada!"
+        @subscription_empty = Subscription.new
+        format.turbo_stream do
+          render turbo_stream: [
+            # turbo_stream.replace(
+            #   "turbo_id",
+            #   partial: "shared/flash_message",
+            #   locals: {
+            #     # ...
+            #   },
+            # ),
+            turbo_stream.replace("flash-messages", partial: "shared/flash_message"),
+            turbo_stream.replace(
+              "neco-form",
+              partial: "subscriptions/form",
+              locals: {
+                subscription: @subscription_empty
+              } 
+            )
+          ]
+        end
         format.html { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada!" }
-        ##format.html { redirect_to new_subscription_url, flash[:success] = "Foi via flash" }
-        flash[:success] = "Foi via flash"
-        ##format.html { render :new, notice: "Sua solicitação foi enviada!" }
-        ##format.turbo_stream { redirect_to new_subscription_url, flash[:notice] = "foi via turbo flash" }
-        format.turbo_stream { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada via turbo stream!" }
-        flash.keep[:notice] = "foi via flash keep"
-        flash.now[:notice] = "foi via flash now"
-        ##render :new, status: :unprocessable_entity
         format.json { render :show, status: :created, location: @subscription }
         puts "Salvou!!"
       else
@@ -68,7 +58,6 @@ class SubscriptionsController < ApplicationController
         format.json { render json: @subscription.errors, status: :unprocessable_entity }
       end
     end
-=end
   end
 
   # PATCH/PUT /subscriptions/1 or /subscriptions/1.json
