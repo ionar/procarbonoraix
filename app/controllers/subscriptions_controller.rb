@@ -30,6 +30,8 @@ class SubscriptionsController < ApplicationController
       if @subscription.save
         ##format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
         format.html { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada!" }
+        ##format.html { redirect_to new_subscription_url, flash[:success] = "Foi via flash" }
+        flash[:success] = "Foi via flash"
         ##format.html { render :new, notice: "Sua solicitação foi enviada!" }
         #format.turbo_stream { flash.now[:notice] = "foi via turbo" }
         
