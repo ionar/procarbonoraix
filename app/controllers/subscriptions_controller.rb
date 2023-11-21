@@ -16,6 +16,8 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/new
   def new
     @subscription = Subscription.new
+    ##flash.now[:notice] = "foi via flash now"
+    ##flash[:notice] = "foi via flash notice"
   end
 
   # GET /subscriptions/1/edit
@@ -25,7 +27,24 @@ class SubscriptionsController < ApplicationController
   # POST /subscriptions or /subscriptions.json
   def create
     @subscription = Subscription.new(subscription_params)
+    if @subscription.save
+      flash.now[:notice] = "salvou via flash now"
+    else
+      flash.now[:error] = "Failed to update submission."
+    end
 
+    render turbo_stream: [
+                turbo_stream.replace(
+                  "turbo_id",
+                  partial: "shared/flash_message",
+                  locals: {
+                    # ...
+                  },
+                ),
+                turbo_stream.replace("flash-messages", partial: "shared/flash_message"),
+              ]
+
+=begin
     respond_to do |format|
       if @subscription.save
         ##format.html { redirect_to subscription_url(@subscription), notice: "Subscription was successfully created." }
@@ -35,7 +54,7 @@ class SubscriptionsController < ApplicationController
         ##format.html { render :new, notice: "Sua solicitação foi enviada!" }
         ##format.turbo_stream { redirect_to new_subscription_url, flash[:notice] = "foi via turbo flash" }
         format.turbo_stream { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada via turbo stream!" }
-
+        flash.keep[:notice] = "foi via flash keep"
         flash.now[:notice] = "foi via flash now"
         ##render :new, status: :unprocessable_entity
         format.json { render :show, status: :created, location: @subscription }
@@ -45,6 +64,7 @@ class SubscriptionsController < ApplicationController
         format.json { render json: @subscription.errors, status: :unprocessable_entity }
       end
     end
+=end
   end
 
   # PATCH/PUT /subscriptions/1 or /subscriptions/1.json
