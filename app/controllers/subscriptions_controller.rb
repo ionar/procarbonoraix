@@ -33,9 +33,10 @@ class SubscriptionsController < ApplicationController
         ##format.html { redirect_to new_subscription_url, flash[:success] = "Foi via flash" }
         flash[:success] = "Foi via flash"
         ##format.html { render :new, notice: "Sua solicitação foi enviada!" }
-        #format.turbo_stream { flash.now[:notice] = "foi via turbo" }
-        
-        flash.now[:notice] = "foi via flash"
+        ##format.turbo_stream { redirect_to new_subscription_url, flash[:notice] = "foi via turbo flash" }
+        format.turbo_stream { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada via turbo stream!" }
+
+        flash.now[:notice] = "foi via flash now"
         ##render :new, status: :unprocessable_entity
         format.json { render :show, status: :created, location: @subscription }
         puts "Salvou!!"
