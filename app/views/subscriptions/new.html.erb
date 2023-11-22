@@ -1,22 +1,24 @@
 <header>
       <div class="head container">
         <div class="row">
-          <div class="col-7">
+          <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
             <div class="slogan-wrapper">
               <h1 class="titulo-sustentabiliade">SUSTENTABILIDADE</h1>
               <h3 class="titulo-compromisso">Um compromisso <br> Diário</h3>
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
             <div id="inscricao-float">
               <div id="form-inscricao">
-                <p class="preencha-texto">
-                Preencha o formulário e ative um atendimento técnico comercial da <b>Raíx</b>. 
-                Descubra os benefícios especiais para produtores cadastrados no <b>Pro Carbono</b>.
-                </p>
-                <p class="campos-texto">CAMPOS DE PREENCHIMENTO</p>
-                 <%= render partial: "shared/flash_message" %>
-                <%= render "form", subscription: @subscription %>
+                <div id="formulario">
+                  <p class="preencha-texto">
+                  Preencha o formulário e ative um atendimento técnico comercial da <b>Raíx</b>. 
+                  Descubra os benefícios especiais para produtores cadastrados no <b>Pro Carbono</b>.
+                  </p>
+                  <p class="campos-texto">CAMPOS DE PREENCHIMENTO</p>
+                    <%= render partial: "shared/flash_message" %>
+                    <%= render "form", subscription: @subscription %>
+                </div>
               </div>
               <div class="logos-programa-vertical text-center">
               <%= image_tag "logos-vertical.png", height: "300", alt: "Logo parceiros" %>
@@ -27,7 +29,7 @@
       </div>
       <div class="mt-4 container o-programa">
         <div class="row">
-          <div class="col-7 pt-2">
+          <div class="pt-2 col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
             <p>
               O programa PRO Carbono promove uma agricultura 
               de baixo carbono com práticas agrícolas sustentáveis.
@@ -57,7 +59,7 @@
               propriedade.
             </p>
           </div>
-          <div class="col-5">
+          <div class="col-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
           </div> 
         </div>
       </div>
@@ -65,6 +67,15 @@
     <main>
       <section class="divisor-section">
         <div class="divisor"></div>
+      </section>
+      <section id="form-celular-wrapper" class="container d-none d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+        <div id="form-inscricao-celular">
+          <div id="form-celular">
+          </div>
+        </div>
+      </section>
+      <section class="container horizontal text-center d-none d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+        <%= image_tag "logos-horizontal.png", class: "img-fluid", alt: "Logo parceiros" %>
       </section>
       <section class="campanha-de-pontos">
         <div class="container pontos-container">
