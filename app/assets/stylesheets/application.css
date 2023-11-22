@@ -96,6 +96,14 @@ header .head {
     text-shadow: 4px 4px 3px rgba(0,0,0,0.8);
 }
 
+@media (max-width: 768px) { 
+    .titulo-sustentabiliade {
+        font-family: 'Bebas Neue';
+        font-size: 50px;
+        text-shadow: 4px 4px 3px rgba(0,0,0,0.8);
+    }
+ }
+
 .titulo-compromisso {
     font-family: 'Montserrat';
     font-size: 30px;
@@ -165,14 +173,7 @@ header .o-programa {
     padding-top: 20px;
 }
 
-.beneficios-raix .container {
-    /* border: 1px solid firebrick; */
-    display: flex;
-    padding: 0;
-}
-
 .beneficios-col {
-    /* border: 1px solid firebrick; */
     background-color: #A2C403;
     color:#002F1F;
     font-weight: bold;
@@ -184,13 +185,30 @@ header .o-programa {
 .beneficios-li {
     list-style: none;
     height: 50px;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: normal;
 }
 .beneficios-li:before {
     content: '\2022';
     margin: 0px 20px;
     color: #fff /* cor da bolinha */
    }
+@media (max-width: 768px) { 
+    .beneficios-li {
+        font-size: 14px;
+    }
+
+    .beneficios-col {
+        padding-top: 20px;
+        background-color: #A2C403;
+        color:#002F1F;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    }
+ }
 
 .titulo-portifolio{
     text-align: center;

@@ -10,15 +10,7 @@
           <div class="col-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
             <div id="inscricao-float">
               <div id="form-inscricao">
-                <div id="formulario">
-                  <p class="preencha-texto">
-                  Preencha o formulário e ative um atendimento técnico comercial da <b>Raíx</b>. 
-                  Descubra os benefícios especiais para produtores cadastrados no <b>Pro Carbono</b>.
-                  </p>
-                  <p class="campos-texto">CAMPOS DE PREENCHIMENTO</p>
-                    <%= render partial: "shared/flash_message" %>
-                    <%= render "form", subscription: @subscription %>
-                </div>
+                
               </div>
               <div class="logos-programa-vertical text-center">
               <%= image_tag "logos-vertical.png", height: "300", alt: "Logo parceiros" %>
@@ -71,6 +63,15 @@
       <section id="form-celular-wrapper" class="container d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
         <div id="form-inscricao-celular">
           <div id="form-celular">
+          <div id="formulario">
+                  <p class="preencha-texto">
+                  Preencha o formulário e ative um atendimento técnico comercial da <b>Raíx</b>. 
+                  Descubra os benefícios especiais para produtores cadastrados no <b>Pro Carbono</b>.
+                  </p>
+                  <p class="campos-texto">CAMPOS DE PREENCHIMENTO</p>
+                    <%= render partial: "shared/flash_message" %>
+                    <%= render "form", subscription: @subscription %>
+                </div>
           </div>
         </div>
       </section>
@@ -104,18 +105,22 @@
       </section>
       <section class="beneficios-raix">
         <h2 class="titulo-beneficios-raix">VOCÊ JÁ CONHECE OS BENEFÍCIOS DE UTILIZAR RAÍX?</h2>
-        <div class="container grid gap-0"> 
-          <div class="col"><%= image_tag "beneficios-raix-solo.png", alt: "Benefícios Raíx", class: "img-fluid" %></div>
-          <div class="col beneficios-col">
-            <ul>
-              <li class="beneficios-li">Aumento na atividade biológica;</li>
-              <li class="beneficios-li">Infiltração e retenção de água no solo;</li>
-              <li class="beneficios-li">Palhada diversa e abundante;</li>
-              <li class="beneficios-li">Supressão nas ervas daninhas;</li>
-              <li class="beneficios-li">Mantêm a umidade no solo;</li>
-              <li class="beneficios-li">Alta Ciclagem de nutrientes;</li>
-              <li class="beneficios-li">Explora camadas profundas do solo.</li>
-            </ul>
+        <div class="container gap-0"> 
+          <div class="row">
+            <div class="p-0 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <%= image_tag "beneficios-raix-solo.png", alt: "Benefícios Raíx", class: "img-fluid" %>
+            </div>
+            <div class="beneficios-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+              <ul>
+                <li class="beneficios-li">Aumento na atividade biológica;</li>
+                <li class="beneficios-li">Infiltração e retenção de água no solo;</li>
+                <li class="beneficios-li">Palhada diversa e abundante;</li>
+                <li class="beneficios-li">Supressão nas ervas daninhas;</li>
+                <li class="beneficios-li">Mantêm a umidade no solo;</li>
+                <li class="beneficios-li">Alta Ciclagem de nutrientes;</li>
+                <li class="beneficios-li">Explora camadas profundas do solo.</li>
+              </ul>
+            </div>
           </div>
         </div>
         <h4 class="titulo-portifolio">Conheça o nosso portifólio para a Campanha de Pontos Raíx <br> para os produtores PRO Carbono na safra 23/24</h4>
@@ -140,21 +145,23 @@
     </main>
     <footer class="mt-5 pt-5">
       <div class="container text-center">
-        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/r9Y5hjq-ggs?si=5qiL76sVeBCFASX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="video" width="100%" height="315" src="https://www.youtube.com/embed/r9Y5hjq-ggs?si=5qiL76sVeBCFASX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div class="container text-center">
         <h3 class="titulo-footer">CONHEÇA MAIS SOBRE OS PRODUTOS DA</h3>
         <%= image_tag "raix-logo-branca.png", alt: "Logo Raix", width: "200" %>
       </div>
       <div class="container text-center">
-        <button type="button" class="btn-wwwraixsementes">
-          WWW.RAIXSEMENTES.COM.BR
-        </button>
+        <a href="https://www.raixsementes.com.br">
+          <button type="button" class="btn-wwwraixsementes">
+            WWW.RAIXSEMENTES.COM.BR
+          </button>
+        </a>
       </div>
       <div class="container d-flex justify-content-center mt-5 gap-3 pb-5">
-        <div class="social"><a href="#"><%= image_tag "social-insta.png", alt: "Instagram", width: "35" %></a></div>
-        <div class="social"><a href="#"><%= image_tag "social-face.png", alt: "Facebook", width: "35" %></a></div>
-        <div class="social"><a href="#"><%= image_tag "social-linkedin.png", alt: "Linkedin", width: "35" %></a></div>
-        <div class="social"><a href="#"><%= image_tag "social-yt.png", alt: "YouTube", width: "35" %></a></div>
+        <div class="social"><a href="https://www.instagram.com/raixsementes/"><%= image_tag "social-insta.png", alt: "Instagram", width: "35" %></a></div>
+        <div class="social"><a href="https://www.facebook.com/raixsementes"><%= image_tag "social-face.png", alt: "Facebook", width: "35" %></a></div>
+        <div class="social"><a href="https://www.linkedin.com/company/raixsementes/"><%= image_tag "social-linkedin.png", alt: "Linkedin", width: "35" %></a></div>
+        <div class="social"><a href="https://www.youtube.com/channel/UCevxAfTVgt9Or7w4uI9HI7g"><%= image_tag "social-yt.png", alt: "YouTube", width: "35" %></a></div>
       </div>
     </footer>
