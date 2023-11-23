@@ -1,0 +1,82 @@
+<header>
+  <div class="head-resgate container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+        <div class="slogan-wrapper">
+          <h1 class="titulo-sustentabiliade">CAMPANHA DE PONTOS <br>
+          <span class="pro-resgate">&nbsp;PRO&nbsp;</span> CARBONO <span class="raix-resgate">RAÍX</span></h1>
+        </div>
+      </div>
+      <div class="col-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
+        <div id="inscricao-float">
+          <div id="form-inscricao-resgatar">
+            <div id="formulario">
+              <p class="campos-texto">FORMULÁRIO DE INSCRIÇÃO</p>
+              <p class="preencha-texto">
+                Inscreva-se com os seus ados cadastrados no Pro Carbono da Bayer e envie os dados 
+                da sua Nota Fiscal de compra dos cultivares Raíx para validação do seu benefício.
+              </p>
+              <%= render partial: "shared/flash_message" %>
+              <%= render "form", resgate: @resgate %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container o-programa-resgate">
+    <div class="row">
+      <div class="pt-2 col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+        <p>
+          <b>Bem vindo(a) ao Formulário a Campanha de Pontos Pro Carbono Raíx.</b>
+        </p>
+        <p>
+          O programa <b>PRO Carbono Raíx</b>, está aqui para imulsionar uma agricultura de baixo carbono,
+          incentivando práticas conservacionistas e a adoção de tecnologias inovadoras no campo.
+        </p>
+        <p>
+        Em parceria com a Bayer, a Raíx oferece benefícios exclusivos para você, produtor rural. 
+        Junte-se à <b>Campanha de Pontos Pro Carbono Raíx</b>, especialmente elaborada para os
+         produtores cadastrados no programa Pro Carbono.
+        </p>
+        <p>
+          Para participar desta campanha exclusiva, basta preencher o formulário. A Raíx analisará 
+          seus dados com cuidado, alinhando-os à base cadasral do programa Pro Carbono, seguindo 
+          as regras e prazos detalhados na seção a seguir.
+        </p>
+        <p>
+        Para efetuar o cadastro, é necessário informar o número da chave de acesso da nota fiscal da compra.
+        </p>
+        <p>
+        Descubra onde encontrar a chave e acesso para os produtores cadastrados no <b>Pro Carbono</b>.
+        </p>
+      </div>
+      <div class="col-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
+      </div> 
+    </div>
+  </div>
+</header>
+<main>
+<section class="pt-5 pb-5">
+  <div class="container text-center">
+    <%= image_tag 'nf-exemplo.png', class: 'img-fluid' %>
+  </div>
+</section>
+  <section class="regulamento-resgate mb-0">
+    <div class="container">
+      <%= render 'shared/regulamento_texto' %>
+    </div>
+  </section>
+</main>
+<footer class="mt-0 pt-5 pb-5">
+      <div class="container text-center">
+        <div class="texto-footer-resgate mb-4">Em caso de dúvidas, entre em contato conosco pelo email:<br>
+        cwerlang@raixsementes.com.br</div>
+        <%= image_tag "raix-logo-branca.png", alt: "Logo Raix", width: "200" %>
+      </div>
+</footer>
+<section>
+  <div class="container text-center p-4">
+    <%= image_tag 'logos-bayer-procarbono.png', height: '100' %>
+  </div>
+</section>

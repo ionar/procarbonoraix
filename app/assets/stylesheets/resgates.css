@@ -1,0 +1,54 @@
+#form-inscricao-resgatar{
+    border-radius: 20px;
+    background: rgb(163,199,68);
+    background: linear-gradient(90deg, rgba(163,199,68,1) 0%, rgba(98,179,10,1) 100%);
+    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
+    margin: 10% 15% 0 15%;
+    color:#01270b;
+    padding: 20px;
+}
+
+header .head-resgate {
+    min-height: 300px;
+    height: 300px;
+    /* border-radius: 20px; */
+    background-image: url("bg-cab-resgate-foto.png");
+    background-repeat: repeat-x;
+    /* background-position:center; */
+    /* background-size: cover; */
+    overflow:visible;
+    margin-bottom: 0;
+}
+
+.pro-resgate {
+background-color: black;
+}
+
+.raix-resgate {
+    color: rgb(163,199,68);
+}
+
+header .o-programa-resgate {
+    background-color: #E5E5E5;
+    border-radius: 0 0 20px 20px;
+    background-image: url("bg-cinza.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    padding-bottom: 150px;
+    margin-top: 0;
+}
+
+.regulamento-resgate {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #EAFDAC;
+    margin: 0;
+}
+
+.texto-footer-resgate{
+    font-size: 24px;
+    color:#FFF;
+    text-align: center;
+    padding-top: 40px;
+}

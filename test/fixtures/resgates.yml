@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  email: MyString
+  phone: MyString
+  chave: MyString
+  cpfcnpj: MyString
+  agree: false
+  privacidade: false
+
+two:
+  nome: MyString
+  email: MyString
+  phone: MyString
+  chave: MyString
+  cpfcnpj: MyString
+  agree: false
+  privacidade: false

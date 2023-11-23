@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :resgates
   resources :subscriptions
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "subscriptions#new"
+  get "resgatar" => "resgates#new"
 end

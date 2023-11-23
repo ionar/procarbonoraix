@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Resgates</h1>
+
+<div id="resgates">
+  <% @resgates.each do |resgate| %>
+    <%= render resgate %>
+    <p>
+      <%= link_to "Show this resgate", resgate %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New resgate", new_resgate_path %>

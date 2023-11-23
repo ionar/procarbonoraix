@@ -1,0 +1,53 @@
+<%= form_with(model: resgate) do |form| %>
+  <% if resgate.errors.any? %>
+    <script>
+        alert("Por favor preencha novamente:\n<%= resgate.errors.full_messages.to_sentence %>")
+    </script>
+  <% end %>
+
+  <div>
+    <%= form.label 'Nome*', for: :resgate_nome, style: "display: block", class: "preencha-texto" %>
+    <%= form.text_field :nome, class: "form-control"  %>
+  </div>
+
+  <div>
+    <%= form.label 'Email*', for: :resgate_email, style: "display: block", class: "preencha-texto" %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label 'Fone*', for: :resgate_phone, style: "display: block", class: "preencha-texto" %>
+    <%= form.text_field :phone, class: "form-control"  %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label 'Chave de acesso da sua Nota Fiscal de Compra dos produtos Raix (apenas números)*',
+     for: :resgate_chave, style: "display: block", class: "preencha-texto" %>
+    <%= form.text_field :chave, class: "form-control"  %>
+  </div>
+  <br>
+  <div>
+    <%= form.label 'Informe o seu CPF/CNPJ cadastrado no Programa Pro Carbono da Bayer (Apenas números, sem pontos ou traços)*',
+     for: :resgate_cpfcnpj, style: "display: block", class: "preencha-texto" %>
+    <%= form.text_field :cpfcnpj, class: "form-control"  %>
+  </div>
+  <br>
+  <div class="form-check">
+    <%= form.check_box :agree, class: 'form-check-input' %>
+    <%= form.label 'Ao preencher ese formulário, vocês está de acordo com as regras da Capanha de 
+    Pontos Pro Carbono Raix, conforme regulamento que está descrito nesta página.',
+    for: :resgate_agree, class: "form-check-label preencha-texto" %>
+  </div>
+
+  <div class="form-check">
+    <%= form.check_box :privacidade, class: 'form-check-input' %>
+    <%= form.label 'Ao informar os meus dados, estou ciente das diretrizes da Política de Privacidade.',
+    for: :resgate_privacidade, class: "form-check-label preencha-texto" %>
+
+  </div>
+
+    <div class="text-center">
+      <%= form.submit 'Enviar', class: "btn btn-success", data: { turbo_confirm: 'As informações estão corretas?' } %>
+    </div>
+<% end %>
