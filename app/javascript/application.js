@@ -17,6 +17,7 @@ function checkMediaQuery() {
     }
 }
   // Add a listener for when the window resizes
+  window.addEventListener('turbo:render', checkMediaQuery);
   window.addEventListener('load', checkMediaQuery);
   //window.addEventListener('resize', checkMediaQuery);
 
@@ -33,4 +34,5 @@ function checkMediaQuery() {
     }
 }
   // Add a listener for when the window resizes
+  window.addEventListener('turbo:render', checkMediaQueryResgatar);
   window.addEventListener('load', checkMediaQueryResgatar);
