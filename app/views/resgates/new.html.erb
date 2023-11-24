@@ -10,15 +10,6 @@
       <div class="col-5 d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
         <div id="inscricao-float">
           <div id="form-inscricao-resgatar">
-            <div id="formulario">
-              <p class="campos-texto">FORMULÁRIO DE INSCRIÇÃO</p>
-              <p class="preencha-texto">
-                Inscreva-se com os seus ados cadastrados no Pro Carbono da Bayer e envie os dados 
-                da sua Nota Fiscal de compra dos cultivares Raíx para validação do seu benefício.
-              </p>
-              <%= render partial: "shared/flash_message" %>
-              <%= render "form", resgate: @resgate %>
-            </div>
           </div>
         </div>
       </div>
@@ -62,11 +53,26 @@
     <%= image_tag 'nf-exemplo.png', class: 'img-fluid' %>
   </div>
 </section>
-  <section class="regulamento-resgate mb-0">
-    <div class="container">
-      <%= render 'shared/regulamento_texto' %>
+<section id="form-celular-wrapper" class="container d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+  <div id="form-inscricao-celular">
+    <div id="form-celular-resgate">
+      <div id="formulario">
+        <p class="campos-texto">FORMULÁRIO DE INSCRIÇÃO</p>
+        <p class="preencha-texto-dizeres-resgate">
+          Inscreva-se com os seus ados cadastrados no Pro Carbono da Bayer e envie os dados 
+          da sua Nota Fiscal de compra dos cultivares Raíx para validação do seu benefício.
+        </p>
+        <%= render partial: "shared/flash_message" %>
+        <%= render "form", resgate: @resgate %>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+<section class="regulamento-resgate mb-0">
+  <div class="container">
+    <%= render 'shared/regulamento_texto' %>
+  </div>
+</section>
 </main>
 <footer class="mt-0 pt-5 pb-5">
       <div class="container text-center">

@@ -23,28 +23,30 @@
 
   <div>
     <%= form.label 'Chave de acesso da sua Nota Fiscal de Compra dos produtos Raix (apenas números)*',
-     for: :resgate_chave, style: "display: block", class: "preencha-texto" %>
+     for: :resgate_chave, style: "display: block", class: "preencha-texto-dizeres-resgate" %>
     <%= form.text_field :chave, class: "form-control"  %>
   </div>
   <br>
   <div>
     <%= form.label 'Informe o seu CPF/CNPJ cadastrado no Programa Pro Carbono da Bayer (Apenas números, sem pontos ou traços)*',
-     for: :resgate_cpfcnpj, style: "display: block", class: "preencha-texto" %>
+     for: :resgate_cpfcnpj, style: "display: block", class: "preencha-texto-dizeres-resgate" %>
     <%= form.text_field :cpfcnpj, class: "form-control"  %>
   </div>
   <br>
   <div class="form-check">
     <%= form.check_box :agree, class: 'form-check-input' %>
-    <%= form.label 'Ao preencher ese formulário, vocês está de acordo com as regras da Capanha de 
+    <%= form.label :resgate_agree,
+    'Ao preencher ese formulário, vocês está de acordo com as regras da Capanha de 
     Pontos Pro Carbono Raix, conforme regulamento que está descrito nesta página.',
-    for: :resgate_agree, class: "form-check-label preencha-texto" %>
+    class: "form-check-label preencha-texto-dizeres-resgate" %>
   </div>
 
   <div class="form-check">
     <%= form.check_box :privacidade, class: 'form-check-input' %>
-    <%= form.label 'Ao informar os meus dados, estou ciente das diretrizes da Política de Privacidade.',
-    for: :resgate_privacidade, class: "form-check-label preencha-texto" %>
-
+    <%= form.label :esgate_privacidade, 
+    "Ao informar os meus dados, estou ciente das diretrizes da Política de Privacidade.", 
+    class: "form-check-label preencha-texto-dizeres-resgate"
+    %>
   </div>
 
     <div class="text-center">

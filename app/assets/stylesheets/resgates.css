@@ -28,6 +28,9 @@ background-color: black;
     color: rgb(163,199,68);
 }
 
+.preencha-texto-dizeres-resgate{
+    font-size: 14px;
+}
 header .o-programa-resgate {
     background-color: #E5E5E5;
     border-radius: 0 0 20px 20px;

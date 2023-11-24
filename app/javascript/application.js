@@ -20,3 +20,17 @@ function checkMediaQuery() {
   window.addEventListener('load', checkMediaQuery);
   //window.addEventListener('resize', checkMediaQuery);
 
+  function checkMediaQueryResgatar() {
+    const desktopContainer = document.getElementById("form-inscricao-resgatar");
+    const formulario = document.getElementById("formulario");
+    const celularContainer = document.getElementById("form-celular-resgate");
+    // If the inner width of the window is greater then 768px
+    if (window.innerWidth < 992) {
+      // Then log this message to the console
+      celularContainer.appendChild(formulario);
+    } else {
+        desktopContainer.appendChild(formulario)
+    }
+}
+  // Add a listener for when the window resizes
+  window.addEventListener('load', checkMediaQueryResgatar);
