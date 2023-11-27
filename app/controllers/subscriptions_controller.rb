@@ -16,8 +16,6 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/new
   def new
     @subscription = Subscription.new
-    ##flash.now[:notice] = "foi via flash now"
-    ##flash[:notice] = "foi via flash notice"
   end
 
   # GET /subscriptions/1/edit
@@ -52,7 +50,7 @@ class SubscriptionsController < ApplicationController
         end
         format.html { redirect_to new_subscription_url, notice: "Sua solicitação foi enviada!" }
         format.json { render :show, status: :created, location: @subscription }
-        puts "Salvou!!"
+        puts "Salvou subscription!!"
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @subscription.errors, status: :unprocessable_entity }
