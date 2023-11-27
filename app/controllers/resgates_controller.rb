@@ -1,6 +1,7 @@
 class ResgatesController < ApplicationController
   #before_action :set_resgate, only: %i[ show edit update destroy ]
-
+  skip_before_action :verify_authenticity_token
+  
   # GET /resgates or /resgates.json
   def index
     @resgates = Resgate.all
