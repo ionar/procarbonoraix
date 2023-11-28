@@ -2,7 +2,7 @@
     border-radius: 20px;
     background: rgb(163,199,68);
     background: linear-gradient(90deg, rgba(163,199,68,1) 0%, rgba(98,179,10,1) 100%);
-    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.50);
     margin: 10% 15% 0 15%;
     color:#01270b;
     padding: 20px;
@@ -12,10 +12,10 @@ header .head-resgate {
     min-height: 300px;
     height: 300px;
     /* border-radius: 20px; */
-    background-image: url("bg-cab-resgate-foto.png");
+    background-image: url("bg-verde-resgate.png");
     background-repeat: repeat-x;
-    /* background-position:center; */
-    /* background-size: cover; */
+    background-position:center;
+    background-size: cover;
     overflow:visible;
     margin-bottom: 0;
 }
@@ -33,11 +33,11 @@ background-color: black;
 }
 header .o-programa-resgate {
     background-color: #E5E5E5;
-    border-radius: 0 0 20px 20px;
-    background-image: url("bg-cinza.png");
+    /* border-radius: 0 0 20px 20px; */
+    background-image: url("bg-cinza2.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    /* background-size: cover; */
     padding-bottom: 150px;
     margin-top: 0;
 }
@@ -45,7 +45,7 @@ header .o-programa-resgate {
 .regulamento-resgate {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #EAFDAC;
+    background-color: #E5E5E5;
     margin: 0;
 }
 
