@@ -130,15 +130,16 @@ header .o-programa {
 }
 
 .btn-resgate {
+    font-family: 'PT Sans';
     background: rgb(163,199,68);
     background: linear-gradient(90deg, rgba(163,199,68,1) 0%, rgba(98,179,10,1) 100%);
-    color:#01270b;
+    color:white;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 40px;
     border: 5px solid #FFFFFF;
-    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
-    padding: 10px;
+    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.50);
+    padding: 10px 30px 10px 30px;
 }
 .btn-resgate:hover {
     border: 5px solid #ccc;
@@ -213,8 +214,9 @@ header .o-programa {
 .titulo-portifolio{
     text-align: center;
     font-weight: bold;
-    color:dimgray;
-    padding-top: 20px;
+    color:#002F1F;
+    padding-top: 40px;
+
 }
 
 footer {
