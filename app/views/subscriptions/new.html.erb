@@ -24,24 +24,26 @@
   <div class="container-fluid o-programa">
     <div class="container">
       <div class="row">
-        <div class="p-5 texto-justificado col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
-          <p>
+        <div class="p-5 col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+          <p class="texto-justificado">
             O programa PRO Carbono promove uma agricultura 
             de baixo carbono com práticas agrícolas sustentáveis.
           </p>
-          <p>
+          <p class="texto-justificado">
             A <b>Raíx Sementes</b>, em parceria com a Bayer no
             programa PRO Carbono, busca benefícios exclusivos
             para você produtor que está procurando aumentar a
             sustentabilidade e a rentabilidade das áreas cultivadas
           </p>
-          <%= link_to resgatar_url do %>
-          <button type="button" class="btn-wwwraixsementes">
-           CLIQUE PARA RESGATAR OS SEUS PONTOS
-          </button>
-          <% end %>
-          <br><br><br>
-          <p><span class="citacao">
+          <p class="text-center">
+            <%= link_to resgatar_url do %>
+              <button type="button" class="btn-wwwraixsementes">
+              CLIQUE PARA RESGATAR OS SEUS PONTOS
+              </button>
+            <% end %>
+          </p>
+          <br>
+          <p class="texto-justificado"><span class="citacao">
             Comprovamos que os produtores podem
             realmente contribuir muito para reduzir as
             emissões de gases de efeito estufa, com
@@ -49,7 +51,7 @@
             o uso eficaz do solo e melhor manejo de
             áreas produtivas</span>
           </p>
-          <p>
+          <p class="texto-justificado">
             Os mix de plantas de cobertura sequestram o carbono
             da atmosfera e fixam no solo através da palhada e das
             raízes eficientes, beneficiando o planeta e a sua
@@ -86,11 +88,16 @@
       </section>
       <section class="campanha-de-pontos">
         <div class="container-fluid pontos-container">
-              <%= image_tag "campanha-de-pontos-alta.png", alt: "Campanha de pontos", class: "img-fluid" %>
+              <%= image_tag "campanha-de-pontos2.png", alt: "Campanha de pontos", class: "img-fluid" %>
             </div>
         </div>
-        <div class="container">
-          <%= render 'shared/regulamento_texto' %>
+        <div class="container p-4">
+        <div class="row">
+          <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-2 col-xxl-2"></div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 texto-justificado">
+            <%= render 'shared/regulamento_texto' %>
+          </div>
+        <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-2 col-xxl-2"></div>
         </div>
       </section>
       <section class="divisor-section">
@@ -101,7 +108,7 @@
         <div class="container gap-0"> 
           <div class="row">
             <div class="p-0 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-            <%= image_tag "beneficios-raix-solo.png", alt: "Benefícios Raíx", class: "img-fluid" %>
+            <%= image_tag "beneficios-raix-solo2.jpg", alt: "Benefícios Raíx", class: "img-fluid" %>
             </div>
             <div class="beneficios-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
               <ul>
@@ -138,7 +145,13 @@
     </main>
     <footer class="mt-5 pt-5">
       <div class="container text-center">
-        <iframe class="video" width="100%" height="720" src="https://www.youtube.com/embed/r9Y5hjq-ggs?si=5qiL76sVeBCFASX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="row">
+          <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-2 col-xxl-2"></div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 texto-justificado">
+            <iframe class="video" width="100%" height="360" src="https://www.youtube.com/embed/r9Y5hjq-ggs?si=5qiL76sVeBCFASX1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
       </div>
       <div class="container text-center">
         <h3 class="titulo-footer">CONHEÇA MAIS SOBRE OS PRODUTOS DA</h3>

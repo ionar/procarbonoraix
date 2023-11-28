@@ -93,14 +93,14 @@ header .head {
 .titulo-sustentabiliade {
     font-family: 'Bebas Neue';
     font-size: 70px;
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.8);
+    /* text-shadow: 4px 4px 3px rgba(0,0,0,0.8); */
 }
 
 @media (max-width: 992px) { 
     .titulo-sustentabiliade {
         font-family: 'Bebas Neue';
         font-size: 50px;
-        text-shadow: 4px 4px 3px rgba(0,0,0,0.8);
+        /* text-shadow: 4px 4px 3px rgba(0,0,0,0.8); */
     }
  }
 
@@ -109,17 +109,17 @@ header .head {
     font-size: 30px;
     border-left: 2px solid #fff;
     padding-left: 20px;
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.8);
+    /* text-shadow: 4px 4px 3px rgba(0,0,0,0.8); */
     font-weight: bold;
 }
 
 header .o-programa {
     background-color: #E5E5E5;
     /* border-radius: 20px; */
-    background-image: url("bg-cinza.png");
+    background-image: url("bg-cinza2.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    /* background-size: cover; */
     padding-bottom: 150px;
 }
 
