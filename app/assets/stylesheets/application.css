@@ -45,7 +45,7 @@ header .head {
     border-radius: 20px;
     background: rgb(163,199,68);
     background: linear-gradient(90deg, rgba(163,199,68,1) 0%, rgba(98,179,10,1) 100%);
-    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.50);
     margin: 10% 15% 0 15%;
     color:#01270b;
     padding: 20px;
