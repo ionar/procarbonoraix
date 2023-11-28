@@ -261,3 +261,8 @@ footer {
 .video {
     border: 4px solid #A2C403;
 }
+
+.texto-justificado {
+    text-align: justify;
+    text-justify: inter-word;
+  }
