@@ -8,27 +8,27 @@
     <% end %>
 
     <div>
-      <%= form.label 'Nome*', for: :subscription_name, style: "display: block", class: "preencha-texto" %>
+      <%= form.label :name, 'Nome*', style: "display: block", class: "preencha-texto" %>
       <%= form.text_field :name, class: "form-control" %>
     </div>
 
     <div>
-      <%= form.label 'Telefone*', for: :subscription_phone, style: "display: block", class: "preencha-texto" %>
+      <%= form.label :phone, 'Telefone*', style: "display: block", class: "preencha-texto" %>
       <%= form.text_field :phone, class: "form-control"  %>
     </div>
 
     <div>
-      <%= form.label 'Email*', for: :subscription_email, style: "display: block", class: "preencha-texto" %>
+      <%= form.label :email, 'Email*', style: "display: block", class: "preencha-texto" %>
       <%= form.text_field :email, class: "form-control"  %>
     </div>
 
     <div>
-      <%= form.label 'Cidade*', for: :subscription_city, style: "display: block", class: "preencha-texto" %>
+      <%= form.label :city, 'Cidade*', style: "display: block", class: "preencha-texto" %>
       <%= form.text_field :city, class: "form-control"  %>
     </div>
 
     <div>
-      <%= form.label 'Estado*', for: :subscription_province, style: "display: block", class: "preencha-texto" %>
+      <%= form.label :province, 'Estado*', style: "display: block", class: "preencha-texto" %>
       <%= form.select :province,
       [
         ['AC','AC'],
@@ -64,13 +64,13 @@
     </div>
 
     <div>
-      <%= form.label 'Perfil Profissional*', for: :subscription_profile, style: "display: block", class: "preencha-texto" %>
+      <%= form.label :profile, 'Perfil Profissional*', style: "display: block", class: "preencha-texto" %>
       <%= form.select :profile, ["Produtor", "Gerente de propriedade rural", "Técnico de propriedade rural", "Revendedor", "Consultor", "Estudante", "Outros"], {}, { class: "form-select" }  %>
     </div>
 
     <div class="form-check">
       <%= form.check_box :agree, class: 'form-check-input' %>
-      <%= form.label 'Eu concordo em receber comunicações da Raíx Sementes', for: :subscription_agree, class: "form-check-label preencha-texto" %>
+      <%= form.label :agree, 'Eu concordo em receber comunicações da Raíx Sementes', class: "form-check-label preencha-texto" %>
     </div>
 
     <div class="text-center">

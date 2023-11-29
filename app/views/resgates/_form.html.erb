@@ -7,44 +7,44 @@
     <% end %>
 
     <div>
-      <%= form.label 'Nome*', for: :resgate_nome, style: "display: block", class: "preencha-texto-resgate-media" %>
+      <%= form.label :nome, 'Nome*', style: "display: block", class: "preencha-texto-resgate-media" %>
       <%= form.text_field :nome, class: "form-control"  %>
     </div>
 
     <div>
-      <%= form.label 'Email*', for: :resgate_email, style: "display: block", class: "preencha-texto-resgate-media" %>
+      <%= form.label :email, 'Email*', style: "display: block", class: "preencha-texto-resgate-media" %>
       <%= form.text_field :email, class: "form-control" %>
     </div>
 
     <div>
-      <%= form.label 'Fone*', for: :resgate_phone, style: "display: block", class: "preencha-texto-resgate-media" %>
+      <%= form.label :phone, 'Fone*', style: "display: block", class: "preencha-texto-resgate-media" %>
       <%= form.text_field :phone, class: "form-control"  %>
     </div>
     <br>
 
     <div>
-      <%= form.label 'Chave de acesso da sua Nota Fiscal de Compra dos produtos Raix (apenas números)*',
-      for: :resgate_chave, style: "display: block", class: "preencha-texto-resgate-media" %>
+      <%= form.label :chave, 'Chave de acesso da sua nota fiscal de compra dos produtos Raíx (apenas números)*',
+       style: "display: block", class: "preencha-texto-resgate-media" %>
       <%= form.text_field :chave, class: "form-control"  %>
     </div>
     <br>
     <div>
-      <%= form.label 'Informe o seu CPF/CNPJ cadastrado no Programa Pro Carbono da Bayer (Apenas números, sem pontos ou traços)*',
-      for: :resgate_cpfcnpj, style: "display: block", class: "preencha-texto-resgate-media" %>
+      <%= form.label :cpfcnpj, 'Informe o seu CPF/CNPJ cadastrado no programa Pro Carbono da Bayer (Apenas números, sem pontos ou traços)*',
+       style: "display: block", class: "preencha-texto-resgate-media" %>
       <%= form.text_field :cpfcnpj, class: "form-control"  %>
     </div>
     <br>
     <div class="form-check">
       <%= form.check_box :agree, class: 'form-check-input' %>
-      <%= form.label :resgate_agree,
-      'Ao preencher ese formulário, vocês está de acordo com as regras da Capanha de 
-      Pontos Pro Carbono Raix, conforme regulamento que está descrito nesta página.',
+      <%= form.label :agree,
+      'Ao preencher esse formulário, vocês está de acordo com as regras da Campanha de 
+      Pontos Pro Carbono Raíx, conforme regulamento que está descrito nesta página.',
       class: "form-check-label preencha-texto-dizeres-resgate" %>
     </div>
 
     <div class="form-check">
       <%= form.check_box :privacidade, class: 'form-check-input' %>
-      <%= form.label :esgate_privacidade, 
+      <%= form.label :privacidade, 
       "Ao informar os meus dados, estou ciente das diretrizes da Política de Privacidade.", 
       class: "form-check-label preencha-texto-dizeres-resgate"
       %>
