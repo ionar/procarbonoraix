@@ -277,3 +277,22 @@ footer {
     text-align: justify;
     text-justify: inter-word;
   }
+
+.whats-button-link {
+    z-index:1000;
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    border-radius:50px;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.40);
+}
+
+.whats-button-link:hover {
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.50);
+}
+
+.whats-button-link:active {
+    bottom:36px;
+}
