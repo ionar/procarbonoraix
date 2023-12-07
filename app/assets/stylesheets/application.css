@@ -28,9 +28,9 @@ header .head {
     height: 400px;
     /* border-radius: 20px; */
     overflow:visible;
-    background-image: url("x-sustentabilidade.jpg");
+    background-image: url("cab-banner-bg.png");
     background-repeat: no-repeat;
-    background-position:center;
+    background-position:left;
     background-size: cover;
 }
 
