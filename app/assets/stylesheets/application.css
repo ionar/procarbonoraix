@@ -278,7 +278,28 @@ footer {
     text-justify: inter-word;
   }
 
-.whats-button-link {
+.whats-button-link-desktop {
+    padding: 0;
+    z-index:1000;
+    position:fixed;
+    width:252px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    border-radius:50px;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.30);
+    background-color: #00C349;
+}
+
+.whats-button-link-desktop:hover {
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.50);
+}
+
+.whats-button-link-desktop:active {
+    bottom:36px;
+}
+
+.whats-button-link-celular {
     z-index:1000;
     position:fixed;
     width:60px;
@@ -286,13 +307,30 @@ footer {
     bottom:40px;
     right:40px;
     border-radius:50px;
-    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.40);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.30);
 }
 
-.whats-button-link:hover {
-    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.50);
+.whats-button-link-celular:hover {
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.50);
 }
 
-.whats-button-link:active {
+.whats-button-link-celular:active {
     bottom:36px;
+}
+
+@media (max-width: 768px) { 
+    .whats-button-link-celular {
+        display: block;
+    }
+    .whats-button-link-desktop {
+        display: none;
+    }
+}
+@media (min-width: 769px) { 
+    .whats-button-link-celular {
+        display: none;
+    }
+    .whats-button-link-desktop {
+        display: block;
+    }
 }
