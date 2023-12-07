@@ -282,10 +282,10 @@ footer {
     padding: 0;
     z-index:1000;
     position:fixed;
-    width:252px;
-    height:60px;
-    bottom:40px;
-    right:40px;
+    width:212px;
+    height:50px;
+    bottom:35px;
+    right:35px;
     border-radius:50px;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.30);
     background-color: #00C349;
@@ -304,8 +304,8 @@ footer {
     position:fixed;
     width:60px;
     height:60px;
-    bottom:40px;
-    right:40px;
+    bottom:35px;
+    right:35px;
     border-radius:50px;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.30);
 }
